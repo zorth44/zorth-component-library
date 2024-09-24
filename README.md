@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+Storybook 是一个用于开发和展示 UI 组件的强大工具。启动 Storybook 项目的步骤可能会根据你的项目设置略有不同，但通常情况下，以下是启动 Storybook 的基本步骤：
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. 确保你已经安装了 Storybook：
+   如果你还没有在项目中安装 Storybook，可以使用以下命令安装：
 
-## Available Scripts
+   ```
+   npx sb init
+   ```
 
-In the project directory, you can run:
+   这个命令会在你的项目中安装 Storybook 并设置必要的配置文件。
 
-### `npm start`
+2. 检查 package.json：
+   安装完成后，检查你的 package.json 文件。你应该能看到类似这样的 scripts：
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```json
+   "scripts": {
+     "storybook": "start-storybook -p 6006",
+     "build-storybook": "build-storybook"
+   }
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. 启动 Storybook：
+   在命令行中，在你的项目根目录下运行：
 
-### `npm test`
+   ```
+   npm run storybook
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   或者如果你使用 yarn：
 
-### `npm run build`
+   ```
+   yarn storybook
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. 等待编译：
+   Storybook 会开始编译你的项目和故事（stories）。这可能需要一些时间，特别是在首次运行时。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. 访问 Storybook：
+   编译完成后，Storybook 通常会在浏览器中自动打开。如果没有自动打开，你可以手动在浏览器中访问 `http://localhost:6006`（除非你更改了默认端口）。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+注意事项：
 
-### `npm run eject`
+- 如果你的项目使用了特定的框架或库（如 React、Vue、Angular 等），确保你安装了相应的 Storybook 插件。
+- 如果遇到启动问题，检查控制台输出的错误信息，可能需要安装额外的依赖或调整配置。
+- 确保你的项目中有一些 story 文件（通常是 `.stories.js` 或 `.stories.tsx` 文件）。如果没有，Storybook 可能会显示空白页面。
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+如果你遇到任何特定的错误或问题，请提供更多详细信息，我会很乐意帮你解决。
